@@ -45,12 +45,6 @@ fi
     libxml-simple-perl apt-utils gh \
     ${PACKAGES} -y
 
-echo -e "Setting up udev rules for adb!"
- curl --create-dirs -L -o /etc/udev/rules.d/51-android.rules -O -L https://raw.githubusercontent.com/M0Rf30/android-udev-rules/master/51-android.rules
- chmod 644 /etc/udev/rules.d/51-android.rules
- chown root /etc/udev/rules.d/51-android.rules
- systemctl restart udev
-
 if [[ "$(command -v make)" ]]; then
     makeversion="$(make -v | head -1 | awk '{print $3}')"
     if [[ ${makeversion} != "${LATEST_MAKE_VERSION}" ]]; then
