@@ -2,12 +2,6 @@
 #
 # Copyright (C) 2021 TheTablaster.
 # All rights reserved.
-
-git clone https://github.com/Blaster4385/scripts.git
-cd scripts
-chmod u+x setup.sh
-./setup.sh
-cd .. 
 mkdir hycon
 cd hycon
 repo init -u https://github.com/HyconOS/manifest -b eleven
