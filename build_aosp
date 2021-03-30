@@ -1,0 +1,19 @@
+#!/bin/bash
+#
+# Copyright (C) 2021 TheTablaster.
+# All rights reserved.
+
+git clone https://github.com/akhilnarang/scripts
+cd scripts
+./setup/android_build_env.sh
+cd .. 
+mkdir hycon
+cd hycon
+repo init -u https://github.com/HyconOS/manifest -b eleven
+repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
+git clone https://github.com/Hycon-Devices/device_realme_RMX1851 device/realme/RMX1851
+git clone https://github.com/Hycon-Devices/kernel_realme_sdm710 kernel/realme/sdm710
+git clone https://github.com/Hycon-Devices/vendor_realme_RMX1851 vendor/realme/RMX1851
+. build/envsetup.sh
+lunch aosp_RMX1851-userdebug
+make bacon -j$(nproc --all)
