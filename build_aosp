@@ -3,9 +3,9 @@
 # Copyright (C) 2021 TheTablaster.
 # All rights reserved.
 
-git clone https://github.com/akhilnarang/scripts
+git https://github.com/Blaster4385/scripts.git
 cd scripts
-./setup/android_build_env.sh
+./setup.sh
 cd .. 
 mkdir hycon
 cd hycon
