@@ -5,6 +5,7 @@
 
 git clone https://github.com/Blaster4385/scripts.git
 cd scripts
+chmod u+x setup.sh
 ./setup.sh
 cd .. 
 mkdir hycon
