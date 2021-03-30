@@ -3,7 +3,7 @@
 # Copyright (C) 2021 TheTablaster.
 # All rights reserved.
 
-git https://github.com/Blaster4385/scripts.git
+git clone https://github.com/Blaster4385/scripts.git
 cd scripts
 ./setup.sh
 cd .. 
