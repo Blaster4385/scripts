@@ -9,6 +9,7 @@ repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 git clone https://github.com/Hycon-Devices/device_realme_RMX1851 device/realme/RMX1851
 git clone https://github.com/Hycon-Devices/kernel_realme_sdm710 kernel/realme/sdm710
 git clone https://github.com/Hycon-Devices/vendor_realme_RMX1851 vendor/realme/RMX1851
+git clone https://github.com/arter97/arm64-gcc prebuilts/arm64-gcc
 . build/envsetup.sh
 lunch aosp_RMX1851-userdebug
 make bacon -j$(nproc --all)
