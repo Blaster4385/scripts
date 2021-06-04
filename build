@@ -26,7 +26,7 @@ COMMIT_POINT="$(git log --pretty=format:'%h : %s' -1)"
 mkdir -p "/mnt/workdir/proton-clang"
 COMP_TYPE="clang" # unset if want to use gcc as compiler
 CLANG_DIR="/mnt/workdir/proton-clang"
-CLANG_URL="https://github.com/kdrag0n/proton-clang/archive/20210313.tar.gz"
+CLANG_URL="https://github.com/kdrag0n/proton-clang/archive/20210522.tar.gz"
 GCC_DIR="" # Doesn't needed if use proton-clang
 GCC32_DIR="" # Doesn't needed if use proton-clang
 CLANG_FILE="/mnt/workdir/clang.tar.gz"
@@ -47,7 +47,7 @@ else
 fi
 
 # Defconfig
-DEFCONFIG="Illusion_RMX1851_defconfig"
+DEFCONFIG="Illusion_defconfig"
 REGENERATE_DEFCONFIG="" # unset if don't want to regenerate defconfig
 
 # Telegram
@@ -88,7 +88,7 @@ tg_ship() {
 # Costumize
 #versioning
 KERNEL="[TEST]IllusionX"
-DEVICE="RMX1851"
+DEVICE="sdm710"
 KERNELTYPE="$CONFIG_LOCALVERSION"
 KERNELNAME="${KERNEL}-${DEVICE}-${KERNELTYPE}-$(date +%y%m%d-%H%M)"
 TEMPZIPNAME="${KERNELNAME}-unsigned.zip"
