@@ -32,7 +32,8 @@ tg_ship() {
     )"
 }
 
-device=`cat device.txt`
-wget -i link.txt
+git clone https://Blaster4385:$token@github.com/Blaster4385/upload text
+device=`cat text/device.txt`
+wget -i text/link.txt
 curl --insecure --user v3nk4135h:$password -T PixelBlaster*.zip sftp://frs.sourceforge.net/home/frs/project/pixelblaster-os/$device/
 tg_cast "<b>Build Uploaded</b>"
