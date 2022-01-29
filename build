@@ -3,7 +3,7 @@
 #
 # Copyright (C) 2020 azrim.
 # All rights reserved.
-
+echo $CHATID
 # Init
 KERNEL_DIR="${PWD}"
 cd $KERNEL_DIR
